@@ -1,1 +1,6 @@
+PROBLEME / LIMITARI / OBSERVATII
+
+- Impartirea la 0 returneaza Infitiny sau -Infinity / Am fi putea returna un mseaj de eroare mai clar pentru user
+- Impartirea unui numar pozitiv la unul negativ retuneaza ERROR / In matematica regula este: + / - = -
+- Calculatorul nu suportă expresii cu paranteze și numere negative în interiorul acestora (Ex. 5-(-2) / 2*-3 / -5*-2).
 
