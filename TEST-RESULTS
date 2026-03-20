@@ -1,6 +1,12 @@
 PROBLEME / LIMITARI / OBSERVATII
 
-- Impartirea la 0 returneaza Infitiny sau -Infinity / Am fi putea returna un mseaj de eroare mai clar pentru user
+- Impartirea la 0 returneaza Infitiny sau -Infinity / Am putea returna un mseaj de eroare mai clar pentru user
 - Impartirea unui numar pozitiv la unul negativ retuneaza ERROR / In matematica regula este: + / - = -
-- Calculatorul nu suportă expresii cu paranteze și numere negative în interiorul acestora (Ex. 5-(-2) / 2*-3 / -5*-2).
+- Calculatorul nu suportă expresii cu paranteze în interiorul acestora (Ex. 5-(-2) / -5*(-2) )
+- Calculatorul nu suportă expresii cu numere negative în interiorul acestora, suporta numere negative doar la inceputul expresiei (Ex. 2*-3 / -5*-2 / 6*2/-2 )
+- Calculatorul nu suporta numere foarte mari, le afiseaza in notatie stiintifica (Ex. 12345*12345 = 1.5239902E8)
 
+UNIT TEST OBS:
+- metoda Calculate este private / am scris un test unitar pentru ea, dar nu poate fi apelata fara sa o modificam in package-private
+- am scris si un test unitar pentru Run, care apeleaza evaluateExpression, care la randul ei apeleaza Calculate. Run este singura metoda publica care poate fi apelata in pentru testare
+Din ce am citit, cand metoda pe care o testam este privata, o putem testa indirect printr-o alta metoda. As dori sa-mi confirmati ca asa se procedeaza si inntr-un test real.
