@@ -1,0 +1,106 @@
+// Test 1: Operație combinată
+Expression: 5+2*3-4
+Expected: 7.0
+Actual: 7.0
+Result: PASS
+
+// Test 2: Operație combinată
+Expression: 5-4/2+3
+Expected: 6.0
+Actual: 6.0
+Result: PASS
+
+// Test 3: Împărțire simplă
+Expression: 6/2
+Expected: 3.0
+Actual: 3.0
+Result: PASS
+
+// Test 4: Numere negative
+Expression: -5+3
+Expected: -2.0
+Actual: -2.0
+Result: PASS
+
+// Test 5: Numere negative
+Expression: -3-6
+Expected: -9.0
+Actual: -9.0
+Result: PASS
+
+// Test 6: Împărțire la zero (pozitiv / zero)
+Expression: 5/0
+Expected: Infinity
+Actual: Infinity
+Result: PASS
+// Observație: Codul returnează Infinity; ar fi mai clar un mesaj "Cannot divide by 0"
+
+// Test 7: Împărțire la zero (negativ / zero)
+Expression: -5/0
+Expected: -Infinity
+Actual: -Infinity
+Result: PASS
+// Observație: Codul returnează -Infinity; ar fi mai clar un mesaj "Cannot divide by 0"
+
+// Test 8: Divizare pozitiv / negativ
+Expression: 8/-2
+Expected: -4.0
+Actual: ?
+Result: FAIL
+// Observație: Testul a eșuat; codul nu gestionează expresia corect pentru divizare cu minus fără paranteză
+
+// Test 9: Divizare cu paranteză, pozitiv / negativ
+Expression: 8/(-2)
+Expected: -4.0
+Actual: ?
+Result: FAIL
+// Observație: Testul a eșuat; codul nu gestionează expresia corect pentru divizare cu paranteză
+
+// Test 10: Expresie invalidă
+Expression: 5++2
+Expected: ERROR
+Actual: ERROR
+Result: PASS
+
+// Test 11: Minus la început
+Expression: -2*3+4
+Expected: -2.0
+Actual: -2.0
+Result: PASS
+
+// Test 12: Dubla negatie
+Expression: 5-(-2)
+Expected: 7.0
+Actual: ERROR
+Result: FAIL
+// Observație: Testul a eșuat; codul nu gestionează corect expresia cu dubla negatie 
+
+// Test 13: Operații multiple înmulțire / împărțire
+Expression: 2*3/4*5
+Expected: 7.5
+Actual: 7.5
+Result: PASS
+
+// Test 14: Zero în expresie
+Expression: 0*5+0/3
+Expected: 0.0
+Actual: 0.0
+Result: PASS
+
+// Test 15: Litere în expresie
+Expression: 5+abc
+Expected: ERROR
+Actual: ERROR
+Result: PASS
+
+// Test 16: Litere în expresie
+Expression: a+3
+Expected: ERROR
+Actual: ERROR
+Result: PASS
+
+// Test 17: Litere în expresie
+Expression: a+a
+Expected: ERROR
+Actual: ERROR
+Result: PASS
